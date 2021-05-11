@@ -36,8 +36,8 @@ public class ConfiguracioSeguretatWeb extends WebSecurityConfigurerAdapter {
                 .antMatchers("/", "/register","/templates/**","/error","/errorlogin","/login")
                 .permitAll()
 
-                .antMatchers("/empleats/eliminar/**").hasRole("ADMIN")
-                .antMatchers("/empleats/new/**").hasRole("ADMIN")
+                .antMatchers("/equips/eliminar/**").hasRole("ADMIN")
+                .antMatchers("/equips/new/**").hasRole("ADMIN")
                 .antMatchers("/webjars/**", "/css/**","/login","/", "/register/**").permitAll()
 
                 .anyRequest().authenticated()

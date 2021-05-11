@@ -12,11 +12,11 @@ import javax.persistence.Id;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-public class Empleat {
+public class Equips {
     @Id
     @GeneratedValue
     private int id;
     private String nom;
-    private String email;
-    private String telefon;
+    private String resultat;
+    private String regio;
 }

@@ -15,18 +15,18 @@
 <tr>
     <th>ID</th>
     <th>Nom</th>
-    <th>Email</th>
-    <th>Telèfon</th>
+    <th>Resultat</th>
+    <th>Regió</th>
 </tr></br>
 </thead>
 <tbody>
-<tr class="list-group" th:each="emp : ${llistaEmpleats}">
-    <td th:text="${emp.id}">id</td>
-    <td th:text="${emp.nom}">nom</td>
-    <td th:text="${emp.email}">e@mail.com</td>
-    <td th:text="${emp.telefon}">012345678</td>
-    <td><a th:href="@{'/empleats/edit'(id=${emp.id},nom=${emp.nom},email=${emp.email},telefon=${emp.telefon})}">Editar</a></td>
-    <td><a th:href="@{'/empleats/eliminar'(id=${emp.id})}">Eliminar</a></td></br>
+<tr class="list-group" th:each="eqp : ${llistaEquips}">
+    <td th:text="${eqp.id}">id</td>
+    <td th:text="${eqp.nom}">nom</td>
+    <td th:text="${eqp.resultat}">e@mail.com</td>
+    <td th:text="${eqp.regio}">012345678</td>
+    <td><a th:href="@{'/equips/edit'(id=${eqp.id},nom=${eqp.nom},email=${eqp.resultat},telefon=${eqp.regio})}">Editar</a></td>
+    <td><a th:href="@{'/equips/eliminar'(id=${eqp.id})}">Eliminar</a></td></br>
 </tr>
 </tbody>
 </table>

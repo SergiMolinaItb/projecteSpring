@@ -1,7 +1,7 @@
 <html xmlns:th="https://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Afegir/Editar Empleat</title>
+    <title>Afegir/Editar Equip</title>
     <link href="/webjars/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="/css/signin.css" rel="stylesheet">
     <script src="/webjars/jquery/3.1.1/jquery.min.js"></script>
@@ -10,17 +10,17 @@
 </head>
 <body>
 <div class="container jumbotron" align="center">
-    <form class="input-group" method="post" action="#" th:action="${empleatForm.id!=0} ?@{/empleats/edit/submit} : @{/empleats/new/submit}" th:object="${empleatForm}">
-        <h1 th:text="${empleatForm.id!=0}?'Editar empleat': 'Nou empleat'">bla bla empleat</h1>
-        <label>ID </label><br/><input type="text" id="id" placeholder="1" th:field="*{id}" th:attrappend="readonly=${empleatForm.id!=0}?'readonly':null"><br/>
+    <form class="input-group" method="post" action="#" th:action="${equipsForm.id!=0} ?@{/equips/edit/submit} : @{/equips/new/submit}" th:object="${equipsForm}">
+        <h1 th:text="${equipsForm.id!=0}?'Editar equip': 'Nou equip'">bla bla empleat</h1>
+        <label>ID </label><br/><input type="text" id="id" placeholder="1" th:field="*{id}" th:attrappend="readonly=${equipsForm.id!=0}?'readonly':null"><br/>
         <label>Nom </label><br/><input type="text" id="nom" placeholder="Nom" th:field="*{nom}"><br/>
-        <label>Email </label><br/><input type="text" id="email" placeholder="a@a.com" th:field="*{email}"><br/>
-        <label>Telèfon </label><br/><input type="text" id="telefon" placeholder="93123456" th:field="*{telefon}"><br/>
+        <label>Resultat </label><br/><input type="text" id="email" placeholder="a@a.com" th:field="*{resultat}"><br/>
+        <label>Regió </label><br/><input type="text" id="telefon" placeholder="93123456" th:field="*{regio}"><br/>
         <button class="btn-default" type="submit">Enviar</button>
     </form>
     <div class="container jumbotron" style="text-align: -webkit-center">
         <form th:action="@{/logout}" method="post">
-        <input type="submit" value="Sortir (Sign Out)"/>
+            <input type="submit" value="Sortir (Sign Out)"/>
         </form>
     </div>
 </div>
