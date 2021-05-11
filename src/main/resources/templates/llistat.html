@@ -21,10 +21,10 @@
 </thead>
 <tbody>
 <tr class="list-group" th:each="eqp : ${llistaEquips}">
-    <td th:text="${eqp.id}">id</td>
-    <td th:text="${eqp.nom}">nom</td>
-    <td th:text="${eqp.resultat}">e@mail.com</td>
-    <td th:text="${eqp.regio}">012345678</td>
+    <td th:text="${eqp.id}">Id</td>
+    <td th:text="${eqp.nom}">Nom</td>
+    <td th:text="${eqp.resultat}">0-0</td>
+    <td th:text="${eqp.regio}">LCK</td>
     <td><a th:href="@{'/equips/edit'(id=${eqp.id},nom=${eqp.nom},email=${eqp.resultat},telefon=${eqp.regio})}">Editar</a></td>
     <td><a th:href="@{'/equips/eliminar'(id=${eqp.id})}">Eliminar</a></td></br>
 </tr>
